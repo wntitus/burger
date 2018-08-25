@@ -14,4 +14,19 @@ $(function() {
             location.reload();
         })
     })
+
+    $('.create-burger-form').on('submit', function(event) {
+        event.preventDefault();
+
+        let newBurger = $('#burgN').val().trim();
+
+        $.ajax('/api/burgers/', {
+            type: 'POST',
+            data: {
+                name: newBurger
+            }
+        }).then(function() {
+            location.reload();
+        })
+    })
 })

@@ -13,7 +13,7 @@ let orm = {
     },
 
     insertOne: function(tableInput, colInput, valInput, callback) {
-        let queryString = 'INSERT INTO ' + tableInput + '(' + colInput + ') VALUES (' + valInput + ');'
+        let queryString = 'INSERT INTO ' + tableInput + '(' + colInput + ') VALUES ("' + valInput + '");'
         connection.query(queryString, function(err, response) {
             if (err) throw err;
 
