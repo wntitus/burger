@@ -1,3 +1,4 @@
+//requiring the mysql package and setting up the database connection to be exported
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
