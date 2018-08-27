@@ -12,7 +12,6 @@ $(function() {
                 devoured: true
             }
         }).then(function() {
-            console.log('devoured burger ' + id)
             location.reload();
         })
     })
